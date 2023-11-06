@@ -1,4 +1,4 @@
-# React & Redux group project - Space Travelers' Hub
+ Space Travelers' Hub
 <a name="readme-top"></a>
 <!-- TABLE OF CONTENTS -->
 
@@ -28,6 +28,8 @@
 
 **Space Travelers' Hub
 Space Travelers' Hub is a React and Redux group project that leverages real live data from the SpaceX API. Our mission is to develop a web application for a company that specializes in providing commercial and scientific space travel services. With this application, users will have the opportunity to book rockets for upcoming missions and join selected space expeditions.
+
+ 📗 [Live Demo] -Comming up next
 
 ## 🛠 Built With <a name="built-with"></a>
 Using React documentation
@@ -81,9 +83,10 @@ https://github.com/George7h/space-travelers
 ### Install
 
 Install this project with: 
-
- npm install
- npm install react-scripts
+ - Git
+- Node.js
+- Node package manager
+- React script
 
 
 ### Usage
@@ -152,12 +155,10 @@ If you like this project, give a ⭐️
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank  my coding partiner HossainAraf/Samuel kinyanjui, code reviewers & Microverse management
+I would like to thank  my coding partiner HossainAraf/George Hamman, code reviewers & Microverse management
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-<!-- LICENSE -->
 
 ## 📝 License <a name="license"></a>
 
