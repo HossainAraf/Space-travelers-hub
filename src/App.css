@@ -37,6 +37,11 @@
   text-decoration: none;
 }
 
+#ruler {
+  height: 1rem;
+  border: solid 1px #9a9a9a;
+}
+
 a {
   text-decoration: none;
   color: #3e97ff;
