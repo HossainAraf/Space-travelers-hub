@@ -8,13 +8,17 @@ import MyProfile from './Components/MyProfile';
 function App() {
   return (
     <Router>
-      <Nav />
-      <Routes>
-        <Route path="/" element={<Rockets />} />
-        <Route path="/missions" element={<Missions />} />
-        <Route path="/myprofile" element={<MyProfile />} />
-        <Route path="*" element={<div>If page not found it goes here</div>} />
-      </Routes>
+      <div className="container">
+        <Nav />
+        <div className="App">
+          <Routes>
+            <Route path="/" element={<Rockets />} />
+            <Route path="/missions" element={<Missions />} />
+            <Route path="/my-profile" element={<MyProfile />} />
+            <Route path="*" element={<div>If page not found it goes here</div>} />
+          </Routes>
+        </div>
+      </div>
     </Router>
   );
 }
