@@ -1,3 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+
 .App {
-  text-align: center;
+  margin: 0;
+}
+
+* {
+  font-family: 'Work Sans', sans-serif;
+}
+
+.navbar {
+  display: flex;
+  padding: 0.2rem;
+  border-bottom: 1px solid #ccc3c3;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-weight: 900;
+  font-size: 1.8rem;
+  padding-left: 1rem;
+}
+
+#planetlogo {
+  width: 90px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin-left: auto;
+}
+
+.nav-links li {
+  padding-right: 1rem;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+  color: #3e97ff;
+}
+
+.active-link a {
+  text-decoration: underline;
+  color: #1864ba;
+}
+
+.container {
+  margin: 10px;
 }
