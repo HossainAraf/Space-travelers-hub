@@ -1,4 +1,4 @@
-//IMPORTS
+// IMPORTS
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 // API
@@ -10,7 +10,6 @@ const getRockets = createAsyncThunk('rockets/getRockets', async () => {
   const data = await response.json();
   return data;
 });
-
 
 // REDUCER
 const rocketsSlice = createSlice({
@@ -55,3 +54,7 @@ const rocketsSlice = createSlice({
   },
 });
 
+// SELECTORS
+const { reserveRocket, cancelRocket } = rocketsSlice.actions;
+export { getRockets, reserveRocket, cancelRocket };
+export default rocketsSlice.reducer;
