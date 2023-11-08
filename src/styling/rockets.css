@@ -1,3 +1,58 @@
-* {
-  margin: 0;
+
+.container-rocket {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 0 10px #ccc;
+  padding: 3%;
+}
+
+.container-rocket h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #000;
+}
+
+.container-rocket p {
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 10px 0;
+}
+
+.container-rocket .img-rocket {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-basis: 10%;
+}
+
+.container-rocket .img-rocket img {
+  margin: 1%;
+  width: 10rem;
+}
+
+.reserved {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.reserved h5 {
+  flex: 1;
+  margin: 0 10px;
+  background-color: #18a2b8;
+}
+
+.reserved p {
+  flex: 0 0 auto; /* Keeps the h2 elements from growing */
+  margin: 0; /* Removes default margins for h2 elements */
+  display: inline;
+}
+
+.reserved .res {
+  width: auto;
+  border-radius: 5%;
 }
