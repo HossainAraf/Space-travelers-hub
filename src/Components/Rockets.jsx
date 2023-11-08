@@ -5,7 +5,7 @@ import {
   Button, Container, Row, Col,
 } from 'react-bootstrap';
 import { getRockets, reserveRocket, cancelRocket } from '../Redux/rocketsSlice';
-import '../styles/rockets.css';
+import '../styling/rockets.css';
 
 const Rockets = () => {
   const dispatch = useDispatch();
