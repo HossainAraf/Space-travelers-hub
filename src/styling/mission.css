@@ -1,0 +1,68 @@
+.contain {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+#missionsTable tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+.top {
+  background-color: white;
+}
+
+#missionsTable {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+}
+
+#missionsTable td,
+#missionsTable th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#missionsTable th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+}
+
+.joinmbtn {
+  padding: 0.4rem;
+  background: none;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 1.5px solid;
+  color: rgb(111, 111, 111);
+  border-color: rgb(111, 111, 111);
+  width: max-content;
+}
+
+.leavembtn {
+  background: none;
+  padding: 0.4rem;
+  border-radius: 4px;
+  cursor: pointer;
+  border-color: red;
+  color: red;
+  border: 1.5px solid;
+  width: max-content;
+}
+
+.rlabel {
+  background-color: rgb(24 162 184);
+  padding: 0.4rem;
+  border-radius: 4px;
+  color: white;
+  width: max-content;
+}
+
+.nlabel {
+  background-color: rgb(109 117 125);
+  padding: 0.4rem;
+  border-radius: 4px;
+  color: white;
+  width: max-content;
+}
