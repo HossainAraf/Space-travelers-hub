@@ -1,38 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+
 .App {
-  text-align: center;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  font-family: 'Work Sans', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar {
   display: flex;
-  flex-direction: column;
+  padding: 0.2rem;
+  border-bottom: 1px solid #ccc3c3;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
 }
 
-.App-link {
-  color: #61dafb;
+.logo {
+  font-weight: 900;
+  font-size: 1.8rem;
+  padding-left: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#planetlogo {
+  width: 90px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin-left: auto;
+}
+
+.nav-links li {
+  padding-right: 1rem;
+  text-decoration: none;
+}
+
+#ruler {
+  height: 1rem;
+  border: solid 1px #9a9a9a;
+}
+
+a {
+  text-decoration: none;
+  color: #3e97ff;
+}
+
+.active-link a {
+  text-decoration: underline;
+  color: #1864ba;
+}
+
+.container {
+  margin: 10px;
 }
