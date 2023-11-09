@@ -53,16 +53,18 @@
 
 .rlabel {
   background-color: rgb(24 162 184);
-  padding: 0.4rem;
+  padding: 0.56rem;
   border-radius: 4px;
   color: white;
   width: max-content;
+  margin: 10px;
 }
 
 .nlabel {
   background-color: rgb(109 117 125);
-  padding: 0.4rem;
+  padding: 0.56rem;
   border-radius: 4px;
   color: white;
   width: max-content;
+  margin: 10px;
 }
