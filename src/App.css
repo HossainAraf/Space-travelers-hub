@@ -26,6 +26,11 @@
   width: 90px;
 }
 
+nav a {
+  color: #3e97ff;
+  text-decoration: none;
+}
+
 .nav-links {
   display: flex;
   list-style: none;
@@ -38,13 +43,8 @@
 }
 
 #ruler {
-  height: 1rem;
+  height: 1.3rem;
   border: solid 1px #9a9a9a;
-}
-
-a {
-  text-decoration: none;
-  color: #3e97ff;
 }
 
 .active-link a {
