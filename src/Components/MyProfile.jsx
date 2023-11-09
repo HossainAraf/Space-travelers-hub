@@ -1,7 +1,7 @@
 // IMPORTS
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Col } from 'react-bootstrap';
 import '../styling/myprofile.css';
 
 // RENDER JOINED MISSONS & RESERVED ROCKETS
@@ -13,8 +13,8 @@ function MyProfile() {
   const reservedRockets = rockets.filter((rocket) => rocket.reserved);
 
   return (
-    <div className="summary">
-      <div className="joined-missions-rockets">
+    <Container className="summary">
+      <Col className="joined-missions-rockets">
         <h3>My Missions</h3>
         {joinedMissions.length > 0 ? (
           <ul className="sortedlist">
@@ -25,8 +25,8 @@ function MyProfile() {
         ) : (
           <p>No missions joined yet.</p>
         )}
-      </div>
-      <div className="joined-missions-rockets">
+      </Col>
+      <Col className="joined-missions-rockets">
         <h3>My Rockets</h3>
         {reservedRockets.length > 0 ? (
           <ul className="sortedlist">
@@ -37,9 +37,8 @@ function MyProfile() {
         ) : (
           <p>No Rockets Reserved Yet.</p>
         )}
-      </div>
-
-    </div>
+      </Col>
+    </Container>
   );
 }
 
