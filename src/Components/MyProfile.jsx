@@ -31,7 +31,7 @@ function MyProfile() {
         {reservedRockets.length > 0 ? (
           <ul className="sortedlist">
             {reservedRockets.map((rocket) => (
-              <li key={rocket.mission_id}>{rocket.name}</li>
+              <li key={rocket.rocket_id}>{rocket.name}</li>
             ))}
           </ul>
         ) : (
