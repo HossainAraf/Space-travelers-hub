@@ -4,6 +4,7 @@ import Missions from './Components/Missions';
 import './App.css';
 import Nav from './Components/Nav';
 import MyProfile from './Components/MyProfile';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
