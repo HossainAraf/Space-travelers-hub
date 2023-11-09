@@ -23,6 +23,19 @@ function MyProfile() {
           <p>No missions joined yet.</p>
         )}
       </div>
+      <div className="joined-missions-rockets">
+        <h3>My Rockets</h3>
+        {reservedRockets.length > 0 ? (
+          <ul className="sortedlist">
+            {reservedRockets.map((rocket) => (
+              <li key={rocket.mission_id}>{rocket.name}</li>
+            ))}
+          </ul>
+        ) : (
+          <p>No Rockets Reserved Yet.</p>
+        )}
+      </div>
+
     </div>
   );
 }
