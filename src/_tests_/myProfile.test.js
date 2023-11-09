@@ -80,4 +80,29 @@ describe('MyProfile Component', () => {
 
     expect(getByText('No Rockets Reserved Yet.')).toBeInTheDocument();
   });
+
+  it('renders reserved rockets when there are reserved rockets', () => {
+    const sampleRockets = [
+      // Add sample rockets with the "reserved" property set to true
+    ];
+
+    store = mockStore({
+      missions: {
+        missions: [],
+      },
+      rockets: {
+        rockets: sampleRockets,
+      },
+    });
+
+    const { getByText } = render(
+      <Provider store={store}>
+        <MyProfile />
+      </Provider>,
+    );
+
+    sampleRockets.forEach((rocket) => {
+      expect(getByText(rocket.name)).toBeInTheDocument();
+    });
+  });
 });
