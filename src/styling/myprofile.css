@@ -16,7 +16,6 @@
   border: 1px solid lightgrey;
   padding: 10px;
   margin-right: auto;
-  width: 20rem;
 }
 
 .sortedlist li:nth-child(even) {
