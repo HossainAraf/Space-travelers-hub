@@ -1,0 +1,30 @@
+.summary {
+  display: flex;
+  justify-content: center;
+}
+
+.joined-missions-rockets {
+  margin-right: 2rem;
+}
+
+.sortedlist {
+  list-style: none;
+  padding: 0;
+}
+
+.sortedlist li {
+  border: 1px solid lightgrey;
+  padding: 10px;
+  margin-right: auto;
+  width: 20rem;
+}
+
+.sortedlist li:nth-child(even) {
+  border-top: none;
+  border-bottom: none;
+}
+
+.sortedlist li:last-child {
+  border: 1px solid lightgrey;
+  border-top: none;
+}
