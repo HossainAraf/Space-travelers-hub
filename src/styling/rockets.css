@@ -1,58 +1,40 @@
-
-.container-rocket {
+.rocket-card {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #fff;
-  box-shadow: 0 0 10px #ccc;
-  padding: 3%;
+  padding: 1rem 2rem 1rem 2rem;
 }
 
-.container-rocket h2 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #000;
+.rocket-image {
+  width: 13rem;
+  height: auto;
+  padding-right: 1rem;
 }
 
-.container-rocket p {
-  font-size: 1rem;
-  font-weight: 400;
-  margin: 10px 0;
+.reserve-button {
+  padding: 0.4rem;
+  background-color: rgb(8, 114, 227);
+  border-radius: 4px;
+  cursor: pointer;
+  border: 1.5px solid;
+  color: rgb(250, 250, 250);
+  border-color: rgb(8, 114, 227);
+  width: max-content;
 }
 
-.container-rocket .img-rocket {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-basis: 10%;
-}
-
-.container-rocket .img-rocket img {
-  margin: 1%;
-  width: 10rem;
+.cancel-button {
+  background: none;
+  padding: 0.4rem;
+  border-radius: 4px;
+  cursor: pointer;
+  border-color: rgb(141, 141, 141);
+  color: rgb(129, 129, 129);
+  border: 1.5px solid;
+  width: max-content;
 }
 
 .reserved {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-.reserved h5 {
-  flex: 1;
-  margin: 0 10px;
-  background-color: #18a2b8;
-}
-
-.reserved p {
-  flex: 0 0 auto; /* Keeps the h2 elements from growing */
-  margin: 0; /* Removes default margins for h2 elements */
-  display: inline;
-}
-
-.reserved .res {
-  width: auto;
-  border-radius: 5%;
+  background-color: rgb(24 162 184);
+  margin-right: 0.5rem;
+  border-radius: 3px;
+  color: #fff;
+  padding: 1px 4px 1px 4px;
 }

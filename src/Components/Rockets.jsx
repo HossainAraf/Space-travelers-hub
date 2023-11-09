@@ -1,88 +1,50 @@
-// IMPORTS
-import { useDispatch, useSelector } from 'react-redux';
-import { useEffect } from 'react';
-import {
-  Button, Container, Row, Col,
-} from 'react-bootstrap';
-import { getRockets, reserveRocket, cancelRocket } from '../Redux/rocketsSlice';
+import React, { useEffect, useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { fetchRockets, reserveRocket, cancelRocketReservation } from '../Redux/rocketsSlice';
 import '../styling/rockets.css';
 
 const Rockets = () => {
   const dispatch = useDispatch();
   const rockets = useSelector((state) => state.rockets.rockets);
 
-  // /GET ROCKETS FROM LOCAL STORAGE
-  const storedRockets = JSON.parse(localStorage.getItem('rockets')) || [];
+  const handleReserveRocket = (id) => {
+    dispatch(reserveRocket(id));
+  };
 
-  // MERGE ROCKETS DATA WITH LOCAL STORAGE
-  const mergedRockets = rockets.map((rocket) => {
-    const storedRocket = storedRockets.find((r) => r.id === rocket.id);
-    if (storedRocket) {
-      return { ...rocket, reserved: storedRocket.reserved };
-    }
-    return rocket;
-  });
+  const cancelReservation = (id) => {
+    dispatch(cancelRocketReservation(id));
+  };
 
-  // Fetch rockets data on page load
+  const [dataFetched, setDataFetched] = useState(false);
+
   useEffect(() => {
-    dispatch(getRockets());
-  }, [dispatch]);
+    const rocketsInStore = rockets && rockets.length > 0;
 
-  // Handle reserve/cancel rocket
-  const handleReserveRocket = (id, reserved) => {
-    // Update the local storage and dispatch the action
-    if (reserved) {
-      localStorage.setItem(
-        'rockets',
-        JSON.stringify(mergedRockets.map((rocket) => (
-          rocket.id === id ? { ...rocket, reserved: false } : rocket))),
-      );
-      dispatch(cancelRocket(id));
-    } else {
-      localStorage.setItem(
-        'rockets',
-        JSON.stringify(mergedRockets.map((rocket) => (
-          rocket.id === id ? { ...rocket, reserved: true } : rocket))),
-      );
-      dispatch(reserveRocket(id));
+    if (!rocketsInStore && !dataFetched) {
+      dispatch(fetchRockets());
+      setDataFetched(true);
     }
-  };
-
-  // Show loading, error, or rockets data
-  const renderRockets = () => {
-    if (mergedRockets.length === 0) {
-      return <p>Loading rockets...</p>;
-    }
-
-    return mergedRockets.map((rocket) => (
-      <Container className="container-rocket" key={rocket.id}>
-        <Row>
-          <div className="img-rocket">
-            <img src={rocket.image} alt={rocket.image} />
-          </div>
-          <Col>
-            <h2>{rocket.name}</h2>
-            <Row className="reserved">
-              <div className="res">
-                {rocket.reserved ? (
-                  <h5>Reserved</h5>
-                ) : null}
-              </div>
-              <p>{rocket.description}</p>
-            </Row>
-            <Button variant="primary" type="button" onClick={() => handleReserveRocket(rocket.id, rocket.reserved)}>
-              {rocket.reserved ? 'Cancel Reservation' : 'Reserve Rocket'}
-            </Button>
-          </Col>
-        </Row>
-      </Container>
-    ));
-  };
+  }, [rockets, dataFetched, dispatch]);
 
   return (
-    <section>
-      {renderRockets()}
-    </section>
+    <div>
+      {rockets.map((rocket) => (
+        <div className="rocket-card" key={rocket.id}>
+          <img className="rocket-image" src={rocket.flickr_images[0]} alt={rocket.rocket_name} />
+          <div className="details">
+            <h2>{rocket.name}</h2>
+            <p>
+              {rocket.reserved ? <span className="reserved">Reserved</span> : null}
+              {rocket.description}
+            </p>
+            <div>
+              {rocket.reserved ? (<button type="button" className="cancel-button" onClick={() => cancelReservation(rocket.id)}>Cancel Reservation</button>)
+                : (<button type="button" className="reserve-button" onClick={() => handleReserveRocket(rocket.id)}>Reserve Rocket</button>)}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
   );
 };
 
