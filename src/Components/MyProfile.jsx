@@ -1,7 +1,10 @@
+// IMPORTS
 import React from 'react';
 import { useSelector } from 'react-redux';
+import { Container, Row, Col } from 'react-bootstrap';
 import '../styling/myprofile.css';
 
+// RENDER JOINED MISSONS & RESERVED ROCKETS
 function MyProfile() {
   const missions = useSelector((state) => state.missions.missions);
   const joinedMissions = missions.filter((mission) => mission.reserved);
