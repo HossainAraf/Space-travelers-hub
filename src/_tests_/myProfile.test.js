@@ -9,7 +9,6 @@ describe('MyProfile Component', () => {
   let store;
 
   beforeEach(() => {
-    // Create a mock Redux store
     store = mockStore({
       missions: {
         missions: [
@@ -57,5 +56,28 @@ describe('MyProfile Component', () => {
     sampleMissions.forEach((mission) => {
       expect(getByText(mission.mission_name)).toBeInTheDocument();
     });
+  });
+
+  it('renders a message when no rocket is reserved', () => {
+    const sampleRockets = [
+      // Add sample rockets with reserved: false
+    ];
+
+    store = mockStore({
+      missions: {
+        missions: [],
+      },
+      rockets: {
+        rockets: sampleRockets,
+      },
+    });
+
+    const { getByText } = render(
+      <Provider store={store}>
+        <MyProfile />
+      </Provider>,
+    );
+
+    expect(getByText('No Rockets Reserved Yet.')).toBeInTheDocument();
   });
 });
