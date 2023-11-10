@@ -29,7 +29,9 @@
 **Space Travelers' Hub
 Space Travelers' Hub is a React and Redux group project that leverages real live data from the SpaceX API. Our mission is to develop a web application for a company that specializes in providing commercial and scientific space travel services. With this application, users will have the opportunity to book rockets for upcoming missions and join selected space expeditions.
 
- 📗 [Live Demo] -Comming up next
+ 📗 [Live Demo] 
+ 
+ - Here is a <a href="https://space-travelers-hub-bznx.onrender.com">link</a> to my live website.
 
 ## 🛠 Built With <a name="built-with"></a>
 Using React documentation
