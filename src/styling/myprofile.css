@@ -17,13 +17,3 @@
   padding: 10px;
   margin-right: auto;
 }
-
-.sortedlist li:nth-child(even) {
-  border-top: none;
-  border-bottom: none;
-}
-
-.sortedlist li:last-child {
-  border: 1px solid lightgrey;
-  border-top: none;
-}
