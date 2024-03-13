@@ -79,13 +79,16 @@ In order to run this project, you need:
 
 Clone this repository to your desired folder:
 
+https://github.com/HossainAraf/Space-travelers-hub
+or
 https://github.com/George7h/space-travelers
+
 
 
 ### Install
 
 Install this project with: 
- - Git
+- Git
 - Node.js
 - Node package manager
 - React script
@@ -122,7 +125,6 @@ Project can be deployed by using the gh-pages and other web platforms.
 - LinkedIn: <a href="https://linkedin.com/in/md-arafat-hossain-111403275"> Md. Arafat Hossain </a>
 
 
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
@@ -157,7 +159,7 @@ If you like this project, give a ⭐️
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank  my coding partiner HossainAraf/George Hamman, code reviewers & Microverse management
+We, HossainAraf and George Hamman, would like to thank our code reviewers and Microverse management for their support and guidance.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
